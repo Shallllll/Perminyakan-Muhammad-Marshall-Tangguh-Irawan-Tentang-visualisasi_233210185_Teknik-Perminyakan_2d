@@ -1,0 +1,79 @@
+## KONSTRUKSI IF THEN ELSE
+
+tahun = int(input("masukkan tahun"))
+
+if (tahun % 4 == 0 and tahun % 100 !=0) or (tahun % 400 == 0):
+    print(f"{tahun} adalah tahun kabisat")
+else:
+    print(f"{tahun} bukan tahun kabisat")
+
+## volume reservoir
+
+import math
+
+r = float(input("masukkan jari jari "))
+h = float(input("masukkan tinggi "))
+
+
+Volume_reservoir= math.pi* r**2 *h
+
+print("tinggi reservoir=", h)
+print("jari jari = ", r)
+print("volume reservoir adalah= ", Volume_reservoir) 
+
+## porositas
+
+import math
+
+Vp = float(input("masukkan volume pori "))
+Vb = float(input("masukkan volume batuan "))
+
+porositas = Vp/ Vb *100
+
+print("volume pori=", Vp)
+print("volume batuan=", Vb)
+print("porositas adalah= ", porositas)
+
+## flow rate
+
+import math
+
+V = float(input("masukkan volume  "))
+t = float(input("masukkan waktu "))
+
+flow_rate = V/t 
+
+print("volume =", V)
+print("waktu=", t)
+print("flow rate adalah= ", flow_rate)
+
+## faktor pemulihan
+
+import math
+
+Np = float(input("masukkan jumlah minyak yang diproduksi "))
+N = float(input("masukkan jumlah minyak awal "))
+m = 0.1
+
+faktor_pemulihan = Np/(N + m/N)
+
+print("jumlah minyak yang diproduksi=", Np)
+print("jumlah minyak awal=", N)
+print("faktor pemulihan= ", faktor_pemulihan) 
+
+## permeabilitas efektif
+
+import math
+
+Krw= float(input("masukkan permeabilitas relatif air "))
+Sw = float(input("masukkan saturasi air "))
+Sor = float(input("masukkan saturasi minyak residual"))
+n = 2
+m = 2
+
+permeabilitas_efektif= Krw* (Sw**n)*(1-Sor - Sw)**m
+
+print("permeabilitas relatif air=", Krw)
+print("saturasi air=", Sw)
+print("saturasi minyak residual= ", Sor) 
+print("permeabilitas efektif adalah", permeabilitas_efektif)
